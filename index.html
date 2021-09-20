@@ -1,0 +1,121 @@
+<head>
+    <meta http-equiv="content-type" charset="UTF-8">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+    <script defer type="text/javascript" src="js/main.js"></script>
+</head>
+<!--bootstrap-->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+<!-- ここからHTMLを記述してください。 -->
+<div id="target"></div>
+<div class="bg-darkGray">
+    <!-- LoginPage -->
+    <div id="login" class="">
+        <div class="vh-100 d-flex justify-content-center align-items-center">
+            <div class="bg-white p-4">
+                <div class="col-12">
+                    <h3>Clicker Empire Game</h3>
+                </div>
+                <div class="col-12 my-4">
+                    <input name="name" class="col-12" placeholder="Your name">
+                </div>
+                <div class="d-flex justify-content-between">
+                    <div class="col-6">
+                        <button id="newGame" type="button" class="col-12 btn btn-primary">New</button>
+                    </div>
+                    <div class="col-6">
+                        <button type="button" class="col-12 btn btn-primary">Login</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- HomePage -->
+    <div id="home" class="d-flex justify-content-center align-items-center d-none pb-5 p-md-5">
+        <div class="d-flex col-10 bg-navy">
+             <!-- <div class="">-->
+                <!-- left -->
+                <div class="col-4 mt-2 p-2 bg-darkGray">
+                    <!-- <div class=""> -->
+                    <div class="humbergerInfo bg-navy text-white text-center">
+                        <p id="leftTitle">1 Burgers</p>
+                        <p id="perBurger">one click ￥25</p>
+                    </div>
+                    <div class="humbergerPic">
+                        <img id="leftItem" class="img-fluid" src="https://cdn.pixabay.com/photo/2014/04/02/17/00/burger-307648_960_720.png">
+                    </div>
+                    <!-- </div> -->
+                </div>
+                <!-- right -->
+                <div class="col-8">
+                    <!-- playerInfo d-flex justify-content-around-->
+                    <div class="text-white d-flex flex-wrap text-center bg-darkGray mt-2">
+                        <div class="col-6 mb-1 mt-2">
+                            <div class="bg-navy p-2">
+                                <p id="name">Tsubasa</p>
+                            </div>
+                        </div>
+                        <div class="col-6 mb-1 mt-2">
+                            <div class="bg-navy p-2">
+                                <p id="age">20 years old</p>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="bg-navy p-2">
+                                <p id="days">1 days</p>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="bg-navy p-2">
+                                <p id="userMoney">¥ 5000</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- severalChoice -->
+                    <div class="bg-darkGray">
+                    <div class="col-12">
+                        <div class="d-flex justify-content align-center overflow-auto">
+                            <!-- 簡潔 -->
+                            
+                            <div id="concise"　class="d-flex justify-content align-items-center concise col-12">
+                                
+                            </div>
+                           
+                            <!-- 詳細 -->
+                            <div id="info" class="d-none bg-navy text-white text-left mt-2">
+                                <div class="d-flex justify-content-between">
+                                    <div class="col-6">
+                                        <p id="itemName">Flip machine</p>
+                                        <p id="itemMax">Max purchases: 500</p>
+                                        <p id="itemPrice">Price: ￥15000</p>
+                                        <p id="itemPerSec" class="text-green">Get ￥25 /click</p>
+                                    </div>
+                                    <div class="col-6">
+                                        <img id="itemImg" class="img-fluid" src="https://cdn.pixabay.com/photo/2019/06/30/20/09/grill-4308709_960_720.png">
+                                    </div>
+                                </div>
+                                <div class="bg-navy pb-4">
+                                    <div class="col-12 my-4">
+                                        <p>How many would you like to buy?</p>
+                                        <input id="itemNum" type="number" name="name" class="col-12" placeholder="0">
+                                        <p id="itemTotal" class="text-right">total :¥0</p>
+                                    </div>
+                                    <div class="d-flex justify-content-between">
+                                        <div class="col-6">
+                                            <button id="goHome" type="button" class="col-12 btn btn-primary">Go Back</button>
+                                        </div>
+                                        <div class="col-6">
+                                            <button id="purchase" type="button" class="col-12 btn btn-primary">Purchase</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                         </div>
+                        </div>
+                    </div>
+                </div>
+             <!-- </div> -->
+        </div>
+    </div>
+</div>

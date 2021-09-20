@@ -1,0 +1,21 @@
+.bg-black{
+    background-color: black;
+}
+.bg-green{
+    background-color: green;
+}
+.bg-red{
+    background-color: red;
+}
+.bg-white{
+    background-color: white;
+}
+.bg-darkGray{
+    background-color: #343a40;
+}
+.bg-navy{
+    background-color: #3c5279 !important;
+}
+.text-green{
+    color: green;
+}
