@@ -2,6 +2,7 @@
     <meta http-equiv="content-type" charset="UTF-8">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
     <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <script defer type="text/javascript" src="js/main.js"></script>
 </head>
 <!--bootstrap-->
@@ -25,21 +26,25 @@
                         <button id="newGame" type="button" class="col-12 btn btn-primary">New</button>
                     </div>
                     <div class="col-6">
-                        <button type="button" class="col-12 btn btn-primary">Login</button>
+                        <button id="loginGame" type="button" class="col-12 btn btn-primary">Login</button>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <!-- HomePage -->
-    <div id="home" class="d-flex justify-content-center align-items-center d-none pb-5 p-md-5">
-        <div class="d-flex col-10 bg-navy">
-             <!-- <div class="">-->
+    <!-- HomePage d-flex justify-content-center align-items-center d-none pb-5 p-md-5 -->
+    <div id="home" class="d-none">
+        <div class="d-flex justify-content-center align-items-center d-none pb-5 p-md-5"><!-- comment-->
+            <div class="d-flex col-10 bg-navy">
                 <!-- left -->
-                <div class="col-4 mt-2 p-2 bg-darkGray">
+                <div class="col-4 my-2 p-2 bg-darkGray">
                     <!-- <div class=""> -->
+                    <!-- reset -->
+                    <i class="fas fa-undo fa-2x text-white"></i>
+                    <!-- initialize -->
+                    <i class="fas fa-save fa-2x text-white"></i>
                     <div class="humbergerInfo bg-navy text-white text-center">
-                        <p id="leftTitle">1 Burgers</p>
+                        <p id="leftTitle">0 Burgers</p>
                         <p id="perBurger">one click ￥25</p>
                     </div>
                     <div class="humbergerPic">
@@ -48,15 +53,15 @@
                     <!-- </div> -->
                 </div>
                 <!-- right -->
-                <div class="col-8">
+                <div class="col-8 my-2 p-2 bg-darkGray">
                     <!-- playerInfo d-flex justify-content-around-->
-                    <div class="text-white d-flex flex-wrap text-center bg-darkGray mt-2">
-                        <div class="col-6 mb-1 mt-2">
+                    <div class="text-white d-flex flex-wrap text-center bg-darkGray">
+                        <div class="col-6 mb-1">
                             <div class="bg-navy p-2">
-                                <p id="name">Tsubasa</p>
+                                <p id="name"></p>
                             </div>
                         </div>
-                        <div class="col-6 mb-1 mt-2">
+                        <div class="col-6 mb-1">
                             <div class="bg-navy p-2">
                                 <p id="age">20 years old</p>
                             </div>
@@ -68,28 +73,28 @@
                         </div>
                         <div class="col-6">
                             <div class="bg-navy p-2">
-                                <p id="userMoney">¥ 5000</p>
+                                <p id="money">¥ 50000</p>
                             </div>
                         </div>
                     </div>
                     <!-- severalChoice -->
-                    <div class="bg-darkGray">
-                    <div class="col-12">
-                        <div class="d-flex justify-content align-center overflow-auto">
+                    <div class="d-flex">
+                    <div class="">
+                        <div class="d-flex justify-content align-center overflow-auto col-12 mt-2" style="overflow-y: scroll; height: 65vh;">
                             <!-- 簡潔 -->
                             
-                            <div id="concise"　class="d-flex justify-content align-items-center concise col-12">
+                            <div id="concise"　class="d-flex justify-content align-items-center col-12 items">
                                 
                             </div>
                            
                             <!-- 詳細 -->
                             <div id="info" class="d-none bg-navy text-white text-left mt-2">
-                                <div class="d-flex justify-content-between">
+                                <div class="d-flex justify-content-between align-items-center">
                                     <div class="col-6">
-                                        <p id="itemName">Flip machine</p>
-                                        <p id="itemMax">Max purchases: 500</p>
-                                        <p id="itemPrice">Price: ￥15000</p>
-                                        <p id="itemPerSec" class="text-green">Get ￥25 /click</p>
+                                        <h4 id="itemName"></h4>
+                                        <p id="itemMax"></p>
+                                        <p id="itemPrice"></p>
+                                        <p id="itemPerSec"></p>
                                     </div>
                                     <div class="col-6">
                                         <img id="itemImg" class="img-fluid" src="https://cdn.pixabay.com/photo/2019/06/30/20/09/grill-4308709_960_720.png">
@@ -103,7 +108,7 @@
                                     </div>
                                     <div class="d-flex justify-content-between">
                                         <div class="col-6">
-                                            <button id="goHome" type="button" class="col-12 btn btn-primary">Go Back</button>
+                                            <button id="goHome" type="button" class="col-12 btn btn-outline-primary bg-light">Go Back</button>
                                         </div>
                                         <div class="col-6">
                                             <button id="purchase" type="button" class="col-12 btn btn-primary">Purchase</button>
@@ -115,7 +120,19 @@
                         </div>
                     </div>
                 </div>
-             <!-- </div> -->
+            </div>
+            <div class="d-flex justify-content-end mt-2">
+                <div class="border p-2 mr-2 hover" id="reset">
+                    <span id="reset" class="material-icons text-white">
+                        restart_alt
+                    </span>
+                </div>
+                <div class="border p-2 hover" id="save">
+                    <span class="material-icons text-white">
+                        save_alt
+                    </span>
+                </div>
+            </div>
         </div>
     </div>
 </div>
