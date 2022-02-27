@@ -4,7 +4,6 @@ class User{
         this.days = 2;
         this.age = 20;
         this.money = 50000;
-        // this.money = 10000000000000;
     }
 }
 class Item{
@@ -140,6 +139,8 @@ function displayShowInfo(ele, item){
 }
 function startGame(user, items){
     // 物件を表示
+    displayNone(config.login);
+    displayShow(config.home);
     createGoodsHtml(items);
 
     const burger = document.getElementById("leftItem");
@@ -155,8 +156,7 @@ function startGame(user, items){
     document.getElementById("days").innerHTML = user.days + " days";
     document.getElementById("money").innerHTML = "¥ " + user.money;
 
-    displayNone(login);
-    displayShow(home);
+    
     perSecond(user, items);
 
     burger.addEventListener("click", function(){
@@ -238,13 +238,14 @@ function startGame(user, items){
     });
 }
 
-const newGame = document.getElementById("newGame");
-const login = document.getElementById("loginGame");
-const home = document.getElementById("home");
+const newGameButton = document.getElementById("newGame");
+const loginButton = document.getElementById("loginGame");
 
 const config = {
     concises: document.getElementById("concise"),
     infoItem: document.getElementById("info"),
+    login: document.getElementById("login"),
+    home: document.getElementById("home")
 }
 const userHtml = {
     days: document.getElementById("days"),
@@ -252,7 +253,7 @@ const userHtml = {
     money: document.getElementById("money")
 }
 
-login.addEventListener("click", function(){
+loginButton.addEventListener("click", function(){
     if(localStorage.getItem(document.getElementsByName("name").item(0).value) === null){
         alert("There is no data.");
         return;
@@ -262,7 +263,7 @@ login.addEventListener("click", function(){
     const items = savedData.items;
     startGame(user, items);
 });
-newGame.addEventListener("click", function(){
+newGameButton.addEventListener("click", function(){
     if(document.getElementsByName("name").item(0).value == ""){
         alert("Please put your name");
         return;
